@@ -1,0 +1,23 @@
+{
+  "name": "grocerycentrica",
+  "version": "1.0.0",
+  "description": "Grocery Centrica",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henriqueadonai/grocerycentrica.git"
+  },
+  "keywords": [
+    "grocery",
+    "centrica"
+  ],
+  "author": "Henrique Adonai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/henriqueadonai/grocerycentrica/issues"
+  },
+  "homepage": "https://github.com/henriqueadonai/grocerycentrica#readme"
+}

@@ -2,9 +2,12 @@
   "name": "grocerycentrica",
   "version": "1.0.0",
   "description": "Grocery Centrica",
-  "main": "index.html",
+  "private": true,
+  "dependencies": {
+    "meteor-node-stubs": "~0.2.0"
+  },	
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "meteor run"
   },
   "repository": {
     "type": "git",

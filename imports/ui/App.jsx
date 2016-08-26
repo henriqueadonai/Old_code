@@ -17,7 +17,7 @@
 
       renderTasks() {
         return this.getTasks().map((task) => (
-          <Task key={task._id} task={task} />
+            <Task key={task._id} task={task} />
         ));
       }
 

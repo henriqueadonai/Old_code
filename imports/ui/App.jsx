@@ -1,5 +1,6 @@
     import React, { Component } from 'react';
     import Task from './Task.jsx';
+    import Footer from './Footer.jsx';
 
 
 
@@ -22,6 +23,8 @@
       }
 
       render() {
+          const Propstergo = "Proster footer";
+        
         return (
           <div className="container">
             <header>
@@ -30,6 +33,7 @@
             <ul>
               {this.renderTasks()}
             </ul>
+            <Footer title={Propstergo} />
           </div>
         );
       }

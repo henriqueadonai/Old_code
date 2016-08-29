@@ -1,10 +1,21 @@
 import React, { Component } from 'react';
 
 export default class CommentBox extends Component {
+    constructor(){
+        super();
+        this.state = { name: "AppCentrica"};
+    }
+    
     render(){
+        setTimeout(() => {
+            this.setState({name : "GroceryCentrica"})
+        },5000);
+        
         return (<div>
+         <p>
+          {this.state.name}
+          </p>
            <h1>Comments Box</h1>
-           <Comment />
             <CommentList />
             <CommentForm/>
         </div>);
@@ -31,3 +42,5 @@ var CommentForm = React.createClass({
     );
   }
 });
+
+

@@ -1,1 +1,27 @@
 Grocery app
+
+every thing in react is a component
+Componentes allways started with CAPITAL Letters
+export class to required
+
+Index.html -> Layout(Component)
+
+
+Layout.jsx (Header.jsx, footer.jsx);
+Header.jsx (Title.jsx)
+
+
+
+
+Grocery App - Architeture
+main.html -> 
+Main.jsx(App.jsx, Helloworld.jsx, Comment.jsx)
+
+
+GitHUb
+
+git add .
+git commit -m "Input ans props changes"
+git push origin master
+
+

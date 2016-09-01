@@ -7,7 +7,7 @@ import { render } from 'react-dom';
 
 import App from '../imports/ui/App.jsx'; 
 import Helloworld from '../imports/ui/Helloworld.jsx';
-import CommentBox from '../imports/ui/Comment.jsx';
+import CommentBox from '../imports/ui/Comment/Comment.jsx';
 
 Meteor.startup(() => {
 

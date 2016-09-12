@@ -14,8 +14,10 @@ Header.jsx (Title.jsx)
 
 
 Grocery App - Architeture
-main.html -> 
-Main.jsx(App.jsx, Helloworld.jsx, Comment.jsx)
+main_test.html -> 
+Main_test.jsx(App_test.jsx, Helloworld.jsx, Comment.jsx)
+
+Main.html(App.jsx(Task.jsx))
 
 
 GitHUb
@@ -25,3 +27,22 @@ git commit -m "Input ans props changes"
 git push origin master
 
 
+//Must read "Collections article" of the Meteor Guide
+TODO: ADD LINK
+//Must read "Application Structure article"
+TODO: ADD LINK
+
+
+Add packege with meteor and save to the package.json:
+meteor npm install --save react-addons-pure-render-mixin
+meteor add react-meteor-data
+
+
+MONGO DB
+meteor mongo
+db.tasks.insert({text:'Hello world', createAt: new Date(), user:'henrique.cabral' })
+
+db.tasks.find()
+
+REACT TOOLS
+https://fb.me/react-devtools"

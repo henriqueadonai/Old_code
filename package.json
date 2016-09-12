@@ -6,7 +6,9 @@
   "dependencies": {
     "meteor-node-stubs": "~0.2.0",
     "react": "^15.3.1",
-    "react-dom": "^15.3.1"
+    "react-addons-pure-render-mixin": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "react-router": "^2.7.0"
   },
   "scripts": {
     "start": "meteor run"
@@ -16,8 +18,9 @@
     "url": "git+https://github.com/henriqueadonai/grocerycentrica.git"
   },
   "keywords": [
-    "grocery",
-    "centrica"
+        "grocery",
+        "centrica",
+        "appcentrica"
   ],
   "author": "Henrique Adonai",
   "license": "MIT",

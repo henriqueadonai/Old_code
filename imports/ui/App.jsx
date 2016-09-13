@@ -16,17 +16,30 @@ class App extends Component {
       <Task key={task._id} task={task} />
     ));
   }
+    
+    handleSubmit(event){
+        event.preventDefault();
+        console.log(this.refs.value);
+        console.log(this.refs.textInput);
+        console.log('Tasks');
+        console.log(Tasks);
+    }
 
   render() {
     return (
-      <div className="container">
+      <div className="container">            
         <header>
           <h1>Todo List</h1>
+           <form className='new-task' onSubmit={this.handleSubmit.bind(this)}>
+                <input type='text' ref='textInput' placeholder='Type to add new tasks'></input>
+            </form>
         </header>
+        
  
         <ul>
           {this.renderTasks()}
         </ul>
+
       </div>
     );
   }

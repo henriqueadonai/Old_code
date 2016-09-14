@@ -3,6 +3,8 @@
 import React, { Component, PropTypes } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 
+import ReactDOM from 'react-dom';
+
 import { Tasks } from '../api/tasks.js';
 
 import Task from './Task.jsx';
@@ -19,10 +21,21 @@ class App extends Component {
     
     handleSubmit(event){
         event.preventDefault();
+        //    const text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
+        
+        const text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
         console.log(this.refs.value);
         console.log(this.refs.textInput);
         console.log('Tasks');
         console.log(Tasks);
+        console.log(text);
+        Tasks.insert({
+            text,
+            createdAt : new Date(),
+            user: "Henrique Meteor",
+        });
+        ReactDOM.findDOMNode(this.refs.textInput).value = '';
+        
     }
 
   render() {

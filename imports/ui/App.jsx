@@ -1,5 +1,3 @@
-
-
 import React, { Component, PropTypes } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 
@@ -24,11 +22,11 @@ class App extends Component {
         //    const text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
         
         const text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
-        console.log(this.refs.value);
-        console.log(this.refs.textInput);
-        console.log('Tasks');
-        console.log(Tasks);
-        console.log(text);
+//        console.log(this.refs.value);
+//        console.log(this.refs.textInput);
+//        console.log('Tasks');
+//        console.log(Tasks);
+//        console.log(text);
         Tasks.insert({
             text,
             createdAt : new Date(),
@@ -46,8 +44,7 @@ class App extends Component {
            <form className='new-task' onSubmit={this.handleSubmit.bind(this)}>
                 <input type='text' ref='textInput' placeholder='Type to add new tasks'></input>
             </form>
-        </header>
-        
+        </header>      
  
         <ul>
           {this.renderTasks()}

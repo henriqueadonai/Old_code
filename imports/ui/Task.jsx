@@ -9,18 +9,19 @@ export default class Task extends Component {
     
     toggleChecked(){
         console.log("toggleChecked")
-        Tasks.update(this.props.task._id,{
-           $set: {checked: !this.props.task.checked }, 
+        Tasks.update(this.props.tasked._id,{
+           $set: {checked: !this.props.tasked.checked }, 
         });
     }
     
    deleteThisTask(){
-       Tasks.remove(this.props.task._id);
+       Tasks.remove(this.props.tasked._id);
    }    
     
   render() {
-      const taskClassName = this.props.task.checked ? 'checked' : '';
-  
+      const taskClassName = this.props.tasked.checked ? 'checked' : '';
+  console.log(this.props.tasked);
+      
     return (        
       <li className={taskClassName}>
               <button className="delete" onClick={this.deleteThisTask.bind(this)}>
@@ -30,7 +31,7 @@ export default class Task extends Component {
       <input type="checkbox" readyOnly checked={this.props.checked}  onClick={this.toggleChecked.bind(this)}  />
 
       <span className='text'>
-      {this.props.task.text}
+      {this.props.tasked.text}
       </span>
       </li>
     );

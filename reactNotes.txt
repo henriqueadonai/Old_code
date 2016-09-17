@@ -1,0 +1,72 @@
+Why react?
+
+Ember vs react
+
+All data, 100 servers.
+
+After 1 hour in react.
+
+Fast enough to use. So we have fast APP
+
+Switch javascript framework again?!?!
+
+Show files from react.
+
+Facebook is using , so react team build react to facebook use.
+It's a strongly argument because they are smart people and they can choose another technology, they are using react.
+Try react the documentation help you to improve your javascript
+Try something new
+
+https://www.youtube.com/watch?v=i1PLMgtG5Qo
+
+
+Component
+Every thing will be a component, put a component together to make a bigger component.
+
+PROPS
+html atributte that we can pass to customize your component.
+
+
+You’re Comparing Apples and Orangutans!
+Sigh. Yes, Angular is a framework, React is a library. Some say this difference makes comparing them illogical. Not at all!
+
+Angular 2’s design embraces the web component’s standard
+Angular 2 continues to put “JS” into HTML. React puts “HTML” into JS.
+JavaScript is far more powerful than HTML
+To read Angular: Learn a long list of Angular-specific syntax.
+To read React: Learn JavaScript
+
+React is unique in its syntactic and conceptual simplicity. Consider iterating in today’s popular JS frameworks/libraries:
+	Ember: {{# each}}
+	Angular 1: ng-repeat
+	Angular 2: ngFor
+	Knockout: data-bind=”foreach”
+	React: JUST USE JS. :)
+	
+	
+Size Concerns
+	Here’s the sizes of some popular frameworks and libraries, minified (source):
+	Angular 2: 764k minified
+	Ember: 435k
+	Angular 1: 143k
+	React + Redux: 151k minified
+	
+	
+. In a world that’s increasingly embracing microservices, microapps, and single-responsibility packages, React gives you the power to “right-size” your application by carefully selecting only what is necessary. In a world with over 200,000 npm modules, that’s a powerful place to be.	
+
+React is a library. It’s precisely the opposite philosophy of large, comprehensive frameworks like Angular and Ember. So when you select React, you’re free to choose modern best-of-breed libraries that solve your problem best.
+
+The philosophy of small, composable, single-purpose tools never goes out of style.
+
+However, Angular 2’s size and syntax give me pause. Angular’s commitment to HTML-centric design makes it complex compared to React’s simpler JavaScript-centric model. In React, you don’t learn framework-specific HTML shims like ngWhatever. You spend your time writing plain ‘ol JavaScript. That’s the future I believe in.
+
+https://www.pluralsight.com/courses/react-flux-building-applications
+https://github.com/facebook/react/wiki/Sites-Using-React
+http://stackoverflow.com/questions/32461229/why-use-redux-over-facebook-flux
+
+
+State:
+You can see that it reads from this.state.hideCompleted. React components have a special field called state where you can store encapsulated component data. We'll need to initialize the value of this.state.hideCompleted in the component's constructor:
+
+filteredTasks.filter(task => !task.checked);
+filteredTasks.filter(function(value){ console.log(value);})

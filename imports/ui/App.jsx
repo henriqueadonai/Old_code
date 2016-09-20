@@ -7,6 +7,7 @@ import { Tasks } from '../api/tasks.js';
 
 import Task from './Task.jsx';
 
+import GoogleLogin from 'react-google-login';
 
 // App component - represents the whole app
 class App extends Component {
@@ -51,9 +52,9 @@ class App extends Component {
            hideCompleted: !this.state.hideCompleted,
         });
     }
+      
 
   render() {
-      console.log(this.props.incompleteCount);
     return (
       <div className="container">            
         <header>

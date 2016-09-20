@@ -10,6 +10,9 @@ Index.html -> Layout(Component)
 Layout.jsx (Header.jsx, footer.jsx);
 Header.jsx (Title.jsx)
 
+NPM Modules
+meteor npm install react-google-login
+meteor npm install --save react-google-login
 
 
 
@@ -41,8 +44,8 @@ meteor add react-meteor-data
 MONGO DB
 meteor mongo
 db.tasks.insert({text:'Hello world', createAt: new Date(), user:'henrique.cabral' })
-
 db.tasks.find()
+
 
 REACT TOOLS
 https://fb.me/react-devtools"

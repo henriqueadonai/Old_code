@@ -5,6 +5,7 @@ import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 
 const responseGoogle = (response) => {
+    console.log("Google return");
   console.log(response);
 }
 
@@ -16,7 +17,7 @@ export default class Login extends Component {
         console.log('Henriqueee');
         return (
         <GoogleLogin
-            clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+            clientId="466670531300-vhks4a5l6bda3u3847gj4qs33qgsupfb.apps.googleusercontent.com"
             buttonText="Login"
             onSuccess={responseGoogle}
             onFailure={responseGoogle}

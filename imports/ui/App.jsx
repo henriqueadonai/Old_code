@@ -7,7 +7,7 @@ import { Tasks } from '../api/tasks.js';
 
 import Task from './Task.jsx';
 
-import GoogleLogin from 'react-google-login';
+
 
 // App component - represents the whole app
 class App extends Component {

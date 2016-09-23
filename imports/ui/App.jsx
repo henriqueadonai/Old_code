@@ -7,6 +7,7 @@ import { Tasks } from '../api/tasks.js';
 
 import Task from './Task.jsx';
 
+import Login from './Login.jsx';
 
 
 // App component - represents the whole app
@@ -29,15 +30,16 @@ class App extends Component {
       return filteredTasks.map((task) => 
                                <Task key={task._id} tasked={task}/>
                               );
-      
-//    return this.props.tasks.map((task) => (
-//      <Task key={task._id} task={task} />
-//    ));
+
+  }
+
+  renderLogin(){
+    return (<Login />);
   }
     
     handleSubmit(event){
         event.preventDefault();
-        
+
         const text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
         Tasks.insert({
             text,
@@ -53,12 +55,16 @@ class App extends Component {
         });
     }
       
+componentWillMount(){
+    console.log("componentWillMount App");
+}
 
   render() {
     return (
-      <div className="container">            
+      
+      <div className="container">
         <header>
-          <h1>Todo List - ({this.props.incompleteCount})</h1>
+          <h1>GroceryCentrica - ({this.props.incompleteCount})</h1>
 
         <label className="hide-completed">
              <input type="checkbox"
@@ -68,7 +74,7 @@ class App extends Component {
              />
               Hide Completed Tasks
           </label>
-          
+          {this.renderLogin()}
            <form className='new-task' onSubmit={this.handleSubmit.bind(this)}>
                 <input type='text' ref='textInput' placeholder='Type to add new tasks'></input>
             </form>
@@ -85,15 +91,16 @@ class App extends Component {
 
 App.propTypes ={
     tasks: PropTypes.array.isRequired,
-    incompleteCount : PropTypes.number.isRequired
+    incompleteCount : PropTypes.number.isRequired,
+    currentUser: PropTypes.object
 }
 
 export default createContainer(() => {
-    console.log(Tasks.find({}).fetch());
   return {
     //tasks: Tasks.find({}).fetch(),
       tasks: Tasks.find({},{sort: { createdAt: -1}}).fetch(),
-      incompleteCount: Tasks.find({checked: { $ne: true }}).count()
+      incompleteCount: Tasks.find({checked: { $ne: true }}).count(),
+      login : "login"
   };
 }, App);
 

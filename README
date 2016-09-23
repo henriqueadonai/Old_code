@@ -1,5 +1,10 @@
 Grocery app
 
+How to download grocery Centrica
+git clone https://github.com/henriqueadonai/grocerycentrica.git
+meteor npm install
+meteor
+
 every thing in react is a component
 Componentes allways started with CAPITAL Letters
 export class to required
@@ -67,6 +72,8 @@ Here is your client ID
 466670531300-vhks4a5l6bda3u3847gj4qs33qgsupfb.apps.googleusercontent.com 
     
 The Client ID lets your app access enabled Google APIs. 
-
+Flux
+https://auth0.com/blog/adding-authentication-to-your-react-flux-app/
  
+
 

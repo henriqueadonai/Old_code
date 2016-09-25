@@ -1,23 +1,23 @@
 import React, { Component, PropTypes } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
-
 import ReactDOM from 'react-dom';
-
 import { Tasks } from '../api/tasks.js';
-
 import Task from './Task.jsx';
+import LoginGoogle from './Login.jsx';
 
-import Login from './Login.jsx';
 
 
 // App component - represents the whole app
 class App extends Component {
-    
+
     constructor(props){
         super(props);
         
-        this.state ={
+        this.state = {
           hideCompleted: false,  
+          connect : false,
+          userobj: null,
+          error: null            
         };
     }
 
@@ -32,21 +32,19 @@ class App extends Component {
                               );
 
   }
-
-  renderLogin(){
-    return (<Login />);
-  }
     
-    handleSubmit(event){
+  handleSubmit(event){
         event.preventDefault();
-
-        const text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
-        Tasks.insert({
-            text,
-            createdAt : new Date(),
-            user: "Henrique Meteor",
-        });
-        ReactDOM.findDOMNode(this.refs.textInput).value = '';        
+        var connect = this.state.connect;
+          if (connect){          
+                const text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
+                Tasks.insert({
+                    text,
+                    createdAt : new Date(),
+                    user: this.state.userobj.email,
+                });
+                ReactDOM.findDOMNode(this.refs.textInput).value = '';        
+          }
     }
     
     toggleHideCompleted(){
@@ -54,15 +52,19 @@ class App extends Component {
            hideCompleted: !this.state.hideCompleted,
         });
     }
-      
-componentWillMount(){
-    console.log("componentWillMount App");
+
+handleUserLogin(connect, userObj) {
+    this.setState({
+      connect: connect,
+      userobj: userObj
+    });
 }
 
   render() {
     return (
       
       <div className="container">
+        <LoginGoogle connect={this.state.connect}  userobj={this.state.userobj} handleUserLogin={this.handleUserLogin.bind(this)}/>
         <header>
           <h1>GroceryCentrica - ({this.props.incompleteCount})</h1>
 
@@ -74,7 +76,7 @@ componentWillMount(){
              />
               Hide Completed Tasks
           </label>
-          {this.renderLogin()}
+
            <form className='new-task' onSubmit={this.handleSubmit.bind(this)}>
                 <input type='text' ref='textInput' placeholder='Type to add new tasks'></input>
             </form>
@@ -92,15 +94,14 @@ componentWillMount(){
 App.propTypes ={
     tasks: PropTypes.array.isRequired,
     incompleteCount : PropTypes.number.isRequired,
-    currentUser: PropTypes.object
+    currentUser: PropTypes.object,
+    login: PropTypes.object
 }
 
 export default createContainer(() => {
   return {
-    //tasks: Tasks.find({}).fetch(),
       tasks: Tasks.find({},{sort: { createdAt: -1}}).fetch(),
       incompleteCount: Tasks.find({checked: { $ne: true }}).count(),
-      login : "login"
   };
 }, App);
 

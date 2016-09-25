@@ -74,6 +74,10 @@ Here is your client ID
 The Client ID lets your app access enabled Google APIs. 
 Flux
 https://auth0.com/blog/adding-authentication-to-your-react-flux-app/
+Adding authentication to your React Flux app
+ReactJS authentication gets easy if you understand just a few basic concepts. Because, let’s face it. React is the new cool kid on the block.
+
  
 
+For parent-child communication, simply pass props.
 

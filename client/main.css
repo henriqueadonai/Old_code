@@ -13,6 +13,17 @@ body {
   font-size: 14px;
 }
 
+.photoLayout {
+	border-radius: 50%;
+	display: block;
+	margin: -1px;
+	overflow: hidden;
+	position: relative;
+	height: 60px;
+	width: 60px;
+	z-index: 0;
+}
+
 
 
 .container {

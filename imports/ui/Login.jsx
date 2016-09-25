@@ -1,54 +1,47 @@
 import GoogleLogin from 'react-google-login';
-
-import React, { Component, PropTypes } from 'react';
-
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import DisplayAnImage from './DisplayImage.jsx'
 
 
-export default class Login extends Component {
+export default class LoginGoogle extends Component {
 
-constructor(props){
-    super(props);
-
-    this.state = {
-        connect: false,
-        userobj: null,
-        error: null,
-    };
-    this.responseGoogleOnSuccess = this.responseGoogleOnSuccess.bind(this);
+responseGoogleOnSuccess(response){
+    this.props.handleUserLogin(true,response.profileObj);
 }
 
-componentWillMount(){
-    console.log("componentWillMount Login");
+responseGoogleOnFailure(failure){
+    console.log(failure);
+}
     
+
+loginMenu() {
+    return  (<GoogleLogin
+        clientId="466670531300-vhks4a5l6bda3u3847gj4qs33qgsupfb.apps.googleusercontent.com"
+        buttonText="Login"
+        onSuccess={this.responseGoogleOnSuccess.bind(this)}
+        onFailure={this.responseGoogleOnFailure}
+      />    );
 }
 
-    responseGoogleOnSuccess(response){
-          this.setState({userobj: response});
+loginSignin(){
+    //        Object { googleId: "110066734457150173332", imageUrl: "https://lh3.googleusercontent.com/-…", email: "henriqueadonai@gmail.com", name: "Henrique Cabral", givenName: "Henrique", familyName: "Cabral" }
+    console.log('signin');
+    console.log(this.props.userobj);
+    profilePhoto = this.props.userobj.imageUrl;
+    profileName = this.props.userobj.name;
+    return (<DisplayAnImage profilePhoto={profilePhoto} profileName={profileName} />);
+}
 
-        // this.setState({
-        //    connect: true,
-        //    obj: response,
-        //    error: false,
-        // });
-        console.log(response);
+
+render() {
+    var login;
+    if (this.props.connect) {
+      login = this.loginSignin();
+    } else {
+      login = this.loginMenu();
     }
 
-    responseGoogleOnFailure(){
-        console.log(failure);
-    }
-
-
-    render() {
-        return (
-        <GoogleLogin
-            clientId="466670531300-vhks4a5l6bda3u3847gj4qs33qgsupfb.apps.googleusercontent.com"
-            buttonText="Login"
-            onSuccess={this.responseGoogleOnSuccess}
-            onFailure={this.responseGoogleOnFailure}
-          />       
-        
-        );
+     return (login);
     }   
-    
 }

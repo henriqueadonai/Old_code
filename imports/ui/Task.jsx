@@ -8,7 +8,7 @@ import {Tasks} from '../api/tasks.js';
 export default class Task extends Component {
     
     toggleChecked(){
-        console.log("toggleChecked")
+        //console.log("toggleChecked")
         Tasks.update(this.props.tasked._id,{
            $set: {checked: !this.props.tasked.checked }, 
         });
@@ -20,7 +20,7 @@ export default class Task extends Component {
     
   render() {
       const taskClassName = this.props.tasked.checked ? 'checked' : '';
-  console.log(this.props.tasked);
+  //console.log(this.props.tasked);
       
     return (        
       <li className={taskClassName}>

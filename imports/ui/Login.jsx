@@ -21,6 +21,7 @@ loginMenu() {
         buttonText="Login"
         onSuccess={this.responseGoogleOnSuccess.bind(this)}
         onFailure={this.responseGoogleOnFailure}
+        className="loginButton"
       />    );
 }
 

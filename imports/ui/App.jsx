@@ -78,7 +78,7 @@ handleUserLogin(connect, userObj) {
           </label>
 
            <form className='new-task' onSubmit={this.handleSubmit.bind(this)}>
-                <input type='text' ref='textInput' placeholder='Type to add new tasks'></input>
+                <input type='text' ref='textInput' placeholder='Type to add new a grocery...'></input>
             </form>
         </header>      
  

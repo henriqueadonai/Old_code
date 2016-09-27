@@ -38,11 +38,13 @@ class App extends Component {
         var connect = this.state.connect;
           if (connect){          
                 const text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
-                Tasks.insert({
-                    text,
-                    createdAt : new Date(),
-                    user: this.state.userobj.email,
-                });
+                Meteor.call('tasks.insert', text,this.state.userobj.email);
+              
+//                Tasks.insert({
+//                    text,
+//                    createdAt : new Date(),
+//                    user: this.state.userobj.email,
+//                });
                 ReactDOM.findDOMNode(this.refs.textInput).value = '';        
           }
     }

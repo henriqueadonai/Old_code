@@ -5,6 +5,8 @@ git clone https://github.com/henriqueadonai/grocerycentrica.git
 meteor npm install
 meteor
 
+git pull
+
 every thing in react is a component
 Componentes allways started with CAPITAL Letters
 export class to required
@@ -77,7 +79,9 @@ https://auth0.com/blog/adding-authentication-to-your-react-flux-app/
 Adding authentication to your React Flux app
 ReactJS authentication gets easy if you understand just a few basic concepts. Because, let’s face it. React is the new cool kid on the block.
 
+ For parent-child communication, simply pass props.
  
-
-For parent-child communication, simply pass props.
+ 
+ JAVASCRIPT
+ http://stackoverflow.com/questions/32558514/javascript-es6-export-const-vs-export-let
 

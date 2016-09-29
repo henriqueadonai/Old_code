@@ -1,0 +1,7 @@
+{
+  "galaxy.meteor.com": { 
+     "env": { 
+       "MONGO_URL": "mongodb://grocerycentrica:appcentrica@ds041506.mlab.com:41506/dbgrocerycentrica"            
+     } 
+   }
+}

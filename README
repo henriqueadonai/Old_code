@@ -81,6 +81,13 @@ ReactJS authentication gets easy if you understand just a few basic concepts. Be
 
  For parent-child communication, simply pass props.
  
+ Database Name:
+ dbgrocerycentrica
+ user
+ grocerycentrica
+ appcentrica
+ 
+ DEPLOY_HOSTNAME=us-east-1.galaxy-deploy.meteor.com meteor deploy www.appgrocerycentrica.com --settings path-to-settings.json
  
  JAVASCRIPT
  http://stackoverflow.com/questions/32558514/javascript-es6-export-const-vs-export-let

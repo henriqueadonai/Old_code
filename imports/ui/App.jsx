@@ -69,7 +69,7 @@ handleUserLogin(connect, userObj) {
         <LoginGoogle connect={this.state.connect}  userobj={this.state.userobj} handleUserLogin={this.handleUserLogin.bind(this)}/>
         <header>
           <h1>GroceryCentrica - ({this.props.incompleteCount})</h1>
-        <LoginGoogle connect={this.state.connect}  userobj={this.state.userobj} handleUserLogin={this.handleUserLogin.bind(this)}/>
+
         <label className="hide-completed">
              <input type="checkbox"
              readOnly

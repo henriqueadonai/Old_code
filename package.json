@@ -5,10 +5,10 @@
   "private": true,
   "dependencies": {
     "meteor-node-stubs": "~0.2.0",
-    "react": "^15.3.1",
+    "react": "^15.3.2",
     "react-addons-pure-render-mixin": "^15.3.1",
-    "react-dom": "^15.3.1",
-    "react-google-login": "^2.5.1",
+    "react-dom": "^15.3.2",
+    "react-google-login": "^2.5.2",
     "react-router": "^2.7.0"
   },
   "scripts": {
